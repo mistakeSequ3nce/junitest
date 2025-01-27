@@ -5,6 +5,12 @@ import {
   ListBulletIcon,
   ChatBubbleLeftIcon,
 } from '@heroicons/vue/24/outline'
+
+const mainPage = 'Главная страница'
+const postsListPage = 'Список постов'
+const usersListPage = 'Список пользователей'
+const commentsPage = 'Комментарии'
+const navItems = [mainPage, postsListPage, usersListPage, commentsPage]
 </script>
 
 <template>
@@ -20,25 +26,13 @@ import {
   <main class="PageMain"></main>
   <nav class="TheNav">
     <ul class="TheNavList">
-      <li>
-        <a href="#main_page" class="TheNavListObject">
-          <HomeIcon class="TheNavListIcons" /> Главная страница
+      <li v-for="page in navItems" :key="page">
+        <a :href="`#${page}`" class="TheNavListObject">
+          <HomeIcon v-if="page == mainPage" class="TheNavListIcons" />
+          <ListBulletIcon v-else-if="page == postsListPage" class="TheNavListIcons" />
+          <IdentificationIcon v-else-if="page == usersListPage" class="TheNavListIcons" />
+          <ChatBubbleLeftIcon v-else class="TheNavListIcons" /> {{ page }}
         </a>
-      </li>
-      <li>
-        <a href="#posts_list_page" class="TheNavListObject">
-          <ListBulletIcon class="TheNavListIcons" /> Список постов</a
-        >
-      </li>
-      <li>
-        <a href="#users_list_page" class="TheNavListObject">
-          <IdentificationIcon class="TheNavListIcons" /> Список пользователей</a
-        >
-      </li>
-      <li>
-        <a href="#comments_page" class="TheNavListObject">
-          <ChatBubbleLeftIcon class="TheNavListIcons" /> Комментарии</a
-        >
       </li>
     </ul>
   </nav>
