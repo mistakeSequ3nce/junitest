@@ -1,2 +1,5 @@
 @import url(./components/TheLogo.scss);
-@import url(./components/TheHeader.scss);/*# sourceMappingURL=mainx.css.map */
+@import url(./components/TheHeader.scss);
+@import url(./container.scss);
+@import url(./components/TheNav.scss);
+@import url(../pages/PageMain.scss);/*# sourceMappingURL=mainx.css.map */

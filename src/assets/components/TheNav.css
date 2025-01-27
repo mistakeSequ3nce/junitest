@@ -1,0 +1,27 @@
+.TheNav {
+  position: sticky;
+  bottom: 0;
+  z-index: 10px;
+  background-color: rgb(255, 255, 255);
+  border-top: 1px solid black;
+}
+.TheNav .TheNavList {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+  padding-left: 0;
+}
+.TheNav .TheNavList .TheNavListIcons {
+  height: 40px;
+  width: 40px;
+}
+.TheNav .TheNavList .TheNavListObject {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px;
+  text-decoration: none;
+  font-size: 15px;
+  text-transform: capitalize;
+}/*# sourceMappingURL=TheNav.css.map */
