@@ -4,6 +4,9 @@
   z-index: 10px;
   background-color: rgb(255, 255, 255);
   border-top: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 
   .TheNavList {
     display: flex;
@@ -11,11 +14,7 @@
     justify-content: space-around;
     list-style-type: none;
     padding-left: 0;
-
-    .TheNavListIcons {
-      height: 40px;
-      width: 40px;
-    }
+    width: 100%;
 
     .TheNavListObject {
       display: flex;
@@ -25,6 +24,12 @@
       text-decoration: none;
       font-size: 15px;
       text-transform: capitalize;
+      width: 150px;
+
+      .TheNavListIcons {
+        height: 40px;
+        width: 40px;
+      }
     }
   }
 }
